@@ -29,7 +29,10 @@
     {% include head-custom.html %}
   </head>
 
-  <body>
+  <body  style="direction:rtl;
+  color:#444444;
+  font-size: {{ site.fontsize }}px;
+  font-family: {{ site.fontname }};">
     
     <div class="wrapper">
       <header {% unless site.description or site.github.project_tagline %} class="without-description" {% endunless %}>
@@ -46,11 +49,7 @@
           <li><a href="{{ site.github.repository_url }}">View On <strong>GitHub</strong></a></li>
         </ul>
       </header>
-      <section style="
-      direction:rtl;
-      color:#444444;
-      font-size: {{ site.fontsize }}px;
-      font-family: {{ site.fontname }};">
+      <section>
 
       {{ content }}
 
